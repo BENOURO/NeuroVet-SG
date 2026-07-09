@@ -1,0 +1,170 @@
+/* Fond général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #fff; /* texte clair */
+  background: linear-gradient(to right, #2c3e50, #34495e); /* dégradé sombre */
+}
+
+/* Header */
+header {
+  background: #1a252f; /* couleur sombre */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: #fff;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00d1b2; /* accent turquoise */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00d1b2; /* effet hover turquoise */
+}
+
+/* User section */
+.user {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.logout {
+  color: #e74c3c; /* rouge pour déconnexion */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout:hover {
+  color: #c0392b;
+}
+
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+  margin: 15px;
+  background: white;
+  border-radius: 8px;
+}
+
+button {
+  background: #16a085;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #1abc9c;
+}
+
+.case, .jeu {
+  margin-bottom: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.graphique {
+  background: #ecf0f1;
+  border: 2px dashed #7f8c8d;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: center;
+}
+.accueil-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.accueil-texte {
+  flex: 2; /* prend plus d’espace */
+}
+
+.accueil-image {
+  flex: 1; /* prend moins d’espace */
+  text-align: right;
+}
+
+.accueil-image img {
+  width: 300px;   /* taille réduite */
+  height: auto;   /* conserve les proportions */
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-block {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-block video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.video-block p {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
