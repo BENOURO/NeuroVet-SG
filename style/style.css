@@ -37,6 +37,31 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   line-height: 1.55;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background: rgba(22, 209, 178, 0.16);
+  top: -120px;
+  right: -100px;
+}
+
+body::after {
+  background: rgba(37, 99, 235, 0.14);
+  bottom: -140px;
+  left: -120px;
 }
 
 /* ==========================================================================
@@ -137,6 +162,16 @@ section {
 section h1,
 section h2 {
   color: var(--text-dark);
+}
+
+section > h1,
+section > h2,
+.case-intro h1 {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--accent);
+  border-radius: 2px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -349,12 +384,24 @@ button:active,
 }
 
 .video-block {
+  position: relative;
+  overflow: hidden;
   background: var(--surface-muted);
-  padding: 16px;
+  padding: 20px 16px 16px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   border: 1px solid rgba(15, 23, 42, 0.06);
   transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.video-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
 }
 
 .video-block:hover {
@@ -364,19 +411,35 @@ button:active,
 
 .video-block video {
   width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-sm);
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   display: block;
   background: #000;
 }
 
 .video-block p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.88em;
   color: var(--text-dark-muted);
   font-weight: 600;
   margin: 0;
-  padding: 4px 2px 0;
+  padding: 8px 2px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.video-block p::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
 .case-intro {
